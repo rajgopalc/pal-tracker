@@ -10,10 +10,10 @@ import java.util.Map;
 @RestController
 public class EnvController {
 
-    private String instanceAddress;
-    private String port;
-    private String memoryLimit;
-    private String instanceIndex;
+    private final String instanceAddress;
+    private final String port;
+    private final String memoryLimit;
+    private final String instanceIndex;
 
     public EnvController(@Value("${port:NOT SET}") String port, @Value("${memory.limit:NOT SET}")String memoryLimit, @Value("${cf.instance.index:NOT SET}")String instanceIndex, @Value("${cf.instance.addr:NOT SET}") String instanceAddress) {
         this.port = port;
