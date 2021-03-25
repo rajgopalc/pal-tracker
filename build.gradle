@@ -27,7 +27,7 @@ def developmentDbUrl = "jdbc:mysql://localhost:3306/tracker_dev?user=tracker&use
 bootRun.environment([
         "WELCOME_MESSAGE": "howdy",
         "SPRING_DATASOURCE_URL": developmentDbUrl,
-        "MANAGEMENT_ENDPOINTS_WEB_EXPOSURE_INCLUDE": "*",
+        "MANAGEMENT_ENDPOINTS_WEB_EXPOSURE_INCLUDE": "info,health",
         "MANAGEMENT_HEALTH_PROBES_ENABLED": true,
         "MANAGEMENT_ENDPOINT_HEALTH_SHOWDETAILS": "always",
 ])
